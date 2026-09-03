@@ -178,7 +178,7 @@ export default function Homepage() {
         "Smoothies",
         "Cake Slices",
         "Cupcakes",
-        "Sausage Pies",
+        "Sausage Rolls",
         ];
 
     const [activeShopTab, setActiveShopTab] = useState<'Cakes' | 'Pastry' | 'Juices'>('Cakes');
@@ -193,15 +193,15 @@ export default function Homepage() {
         ],
         Pastry: [
             { name: 'Meat Pie', image: '/meat-pie.jpg', price: '₦900' },
-            { name: 'Donut', image: '/donuts.jpg', price: '₦550' },
-            { name: 'Sausage Roll', image: '/sausage-roll.png', price: '₦800' },
+            { name: 'Jam Donut', image: '/donuts.jpg', price: '₦550' },
+            { name: 'Sausage Roll', image: '/sausage-roll.png', price: '₦400' },
             { name: 'Puff Pastry', image: '/puff-pastry.jpg', price: '₦650' },
-            { name: 'Bun', image: '/buns.jpg', price: '₦450' },
+            { name: 'Buns', image: '/buns.jpg', price: '₦450' },
         ],
         Juices: [
             { name: 'Fruit Juice', image: '/fruit-juice.jpg', price: '₦800' },
             { name: 'Smoothie', image: '/smoothie.jpg', price: '₦2,500' },
-            { name: 'Fresh Juice (Cocktail)', image: '/cocktail.jpg', price: '₦750' },
+            { name: 'Fresh Juice (Cocktail)', image: '/cocktail.jpg', price: '₦1050' },
         ],
     };
 
@@ -234,7 +234,7 @@ export default function Homepage() {
     const [orderDetails, setOrderDetails] = useState('Hi Spice & Soul, I would like to place an order.');
 
     useEffect(() => {
-        const timeoutId = window.setTimeout(() => setFabVisible(true), 5000);
+        const timeoutId = window.setTimeout(() => setFabVisible(true), 3000);
         return () => window.clearTimeout(timeoutId);
     }, []);
 
@@ -330,7 +330,7 @@ export default function Homepage() {
                         />
                         <Typography
                         sx={{
-                            fontFamily: 'Tahoma',
+                            fontFamily: 'Tahoma, sans-serif',
                             fontSize: { xs: '12px', md: '14px' },
                             fontWeight: { xs: 400, md: 600 },
                             letterSpacing: '2px',
@@ -633,7 +633,7 @@ export default function Homepage() {
                     scrollMarginTop: { xs: '90px', md: '110px' },
                 }}
             >
-                <Grid container spacing={2} sx={{ mt: 2 }}>
+                <Grid container spacing={2} sx={{ my: 2, backgroundColor: '#fff' }}>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <AnimatedBox animation="left" delay={0.12} sx={{
                                 display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%', px: 4, py: 8, 
@@ -1025,7 +1025,7 @@ export default function Homepage() {
                                 key={tab}
                                 onClick={() => setActiveShopTab(tab)}
                                 sx={{
-                                    minWidth: 100,
+                                    minWidth: {xs: 80, md: 120},
                                     px: 1,
                                     py: 1,
                                     borderRadius: 0,
@@ -1384,7 +1384,7 @@ export default function Homepage() {
                                 key={item.id}
                                 onClick={() => scrollToSection(item.id)}
                                 sx={{
-                                    fontFamily: 'Tahoma',
+                                    fontFamily: 'Tahoma, sans-serif',
                                     fontSize: '0.78rem',
                                     letterSpacing: '2px',
                                     cursor: 'pointer',
@@ -1492,7 +1492,7 @@ export default function Homepage() {
                 <Box sx={{ background: 'linear-gradient(135deg, #1c9d5d, #25d366)', p: 2, color: '#fff', position: 'relative' }}>
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                            <Box component="img" src="/remedy_ai.png" alt="remedy" sx={{ width: 32, height: 32, borderRadius: '50%', objectFit: 'cover', backgroundColor: '#fff' }} />
+                            <Box component="img" src="/remedy-fab_x.png" alt="remedy" sx={{ width: 32, height: 52, borderRadius:'40%', objectFit: 'cover',}} />
                             <Typography sx={{ fontFamily: 'var(--font-nunito)', fontWeight: 800, fontSize: '1rem' }}>Spice &amp; Soul Bake House Hub</Typography>
                         </Box>
                         <IconButton onClick={() => setFabOpen(false)} sx={{ color: '#fff' }}>
@@ -1502,7 +1502,7 @@ export default function Homepage() {
                 </Box>
 
                 <Box sx={{ p: 2, position: 'relative', pb: 3 }}>
-                    <Box component="img" src="/remedy_ai.png" alt="remedy" sx={{ position: 'absolute', right: 18, bottom: 18, width: 80, opacity: 0.12 }} />
+                    <Box component="img" src="/remedy-fab_x.png" alt="remedy" sx={{ position: 'absolute', right: 18, bottom: 18, width: 80, opacity: 0.12 }} />
                     <Typography sx={{ fontFamily: 'var(--font-nunito)', fontWeight: 800, fontSize: '1.1rem', mb: 1.5, color: '#111' }}>
                         Tell us what you want
                     </Typography>
