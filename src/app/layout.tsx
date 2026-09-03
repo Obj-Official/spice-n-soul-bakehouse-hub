@@ -20,13 +20,6 @@ const nunito = Nunito({
   subsets: ["latin"],
 });
 
-const theme = createTheme({
-  typography: {
-    fontFamily: 'var(--font-nunito), sans-serif',
-  },
-});
-
-
 export const metadata: Metadata = {
   title: "Spice and Soul Bake House Hub ",
   description: "Spice and Soul Bake House Hub - Delicious confectionery and baked goods",
